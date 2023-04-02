@@ -1,0 +1,48 @@
+{% extends 'generate/base.html' %}
+
+
+{% block content %}
+<div class="col-md-4 offset-md-4">
+
+    <h1 class="h3 text-center" style="color: gold">welcome <span style="color:rgb(6, 159, 6) ;">people</span></h1>
+
+    <form action="{% url 'password' %}" class="card card-body p-5" style="background-color: #121212; ">
+        <h1 class="h3">password generate</h1>
+        <label for="length">Select the length of your password</label>
+        <select name="length" id="length" class="form-control">
+            <option value="6">6 Character</option>
+            <option value="7">7 Character </option>
+            <option value="8">8 Character </option>
+            <option value="9">9 Character </option>
+            <option value="10">10 Character </option>
+            <option value="11">11 Character </option>
+            <option value="12">12 Character </option>
+            <option value="13">13 Character </option>
+            <option value="14">14 Character </option>
+        </select>
+        
+<div class="form-check form-switch ">
+    
+    <label for="uppercase" class="form-check-label ">Uppercase</label>
+    <input type="checkbox" name="uppercase" class="form-check-input" id="uppercase">
+</div>    
+
+<div class="form-check form-switch  "></div>
+    <label for="" class="form-check-label" >Special character</label>
+    <input type="checkbox" class="form-check-input" name="especial" id="especial">
+
+
+<div class="form-check form-switch my-2 ">    
+    <label for="" class="form-check-label">Add numbers</label>
+    <input type="checkbox" class="form-check-input" name="numbers" id="numbers">
+</div>   
+    
+
+
+    <button class="btn btn-primary">Generate Password</button>
+    </form>
+    
+
+</div>
+
+{% endblock %}
